@@ -1,0 +1,30 @@
+li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+ul{
+    display:flex
+}
+
+title {
+    margin-right: auto;
+}
+
+#header-top{
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#global-nav{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#login-area{
+    display: flex;
+  justify-content: center;
+  align-items:center;
+}
