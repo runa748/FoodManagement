@@ -3,7 +3,8 @@
         <head>
             <meta charset="UTF-8">
             <title>食材管理サイト-フーズ-</title>
-            <link rel="stylesheet" href="MainPage.css" type="text/css">
+            <script type="text/javascript" src="signup.js"></script>
+            <link rel="stylesheet" href="signup.css" type="text/css">
         </head>
 
         <body>
@@ -23,14 +24,24 @@
                     <div id="login-area">
                         <ul id="login">
                             <li>
-                                <a href="signup.html">新規会員登録</a>
-                            </li>
-                            <li>
                                 <a href="login.html">ログイン</a>
                             </li>
                         </ul>
                     </div>
                 </ul>
             </div>
+
+            <form method="post" action="test.html">
+                <div class="signup_form_top">
+                    <h1>会員登録</h1>
+                </div>
+                <div class="signup_form_btm">
+                    <input type="email" maxlength="319" placeholder="Email" id="email">
+                    <input type="password" maxlength="64" placeholder="Password(64字以内)" id="pass">
+                    <input type="password" maxlength="64" placeholder="Password(再入力)" id="re_pass">
+                    <input type="submit" name="botton" value="次へ" id="signup">
+                </div>
+            </form>
+
         </body>
     </html>
