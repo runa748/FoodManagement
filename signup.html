@@ -3,7 +3,6 @@
         <head>
             <meta charset="UTF-8">
             <title>食材管理サイト-フーズ-</title>
-            <script type="text/javascript" src="signup.js"></script>
             <link rel="stylesheet" href="signup.css" type="text/css">
         </head>
 
@@ -31,17 +30,41 @@
                 </ul>
             </div>
 
-            <form method="post" action="test.html">
+            <form method="post" action="confirmation.html">
                 <div class="signup_form_top">
                     <h1>会員登録</h1>
                 </div>
                 <div class="signup_form_btm">
-                    <input type="email" maxlength="319" placeholder="Email" id="email">
-                    <input type="password" maxlength="64" placeholder="Password(64字以内)" id="pass">
-                    <input type="password" maxlength="64" placeholder="Password(再入力)" id="re_pass">
-                    <input type="submit" name="botton" value="次へ" id="signup">
+                    <input type="email" maxlength="319" placeholder="Email" id="email" required="required">
+                    <input type="password" maxlength="64" placeholder="Password(64字以内)" id="pass" required="required">
+                    <input type="password" name="confirm" maxlength="64" placeholder="Password(再入力)" id="re_pass" required="required" oninput= "CheckPassword(this)">
+                    <h4 id="pass_error"></h4>
+                    <input type="submit" name="button" value="次へ" id="signup">
                 </div>
             </form>
-
+            <script>
+                function CheckPassword(confirm){
+                    var input1 = pass.value;
+                    var input2 = confirm.value;
+                    
+                    if (input1 != input2){
+                        document.getElementById("pass_error").innerHTML="<strong>パスワードが一致しません。</strong>";
+                    }else{
+                        document.getElementById("pass_error").innerHTML="";
+                    }
+                }
+                document.getElementById("signup").onclick = function(){
+                    const email = document.getElementById("email").value;
+                    const passward = document.getElementById("pass").value;
+                    const passcount = passward.length;
+                    const re_password = document.getElementById("re_pass").value;
+                    var asterisk = "";
+                
+                    for(i = 0;i<passcount;i++){asterisk += "*"};
+                    document.write("<h1>会員情報確認</h1>");
+                    document.write("email：" + email + "<br>");
+                    document.write("password：" + asterisk);
+                };
+            </script>
         </body>
     </html>
