@@ -39,20 +39,26 @@
                     <input type="password" maxlength="64" placeholder="Password(64字以内)" id="pass" required="required">
                     <input type="password" name="confirm" maxlength="64" placeholder="Password(再入力)" id="re_pass" required="required" oninput= "CheckPassword(this)">
                     <h4 id="pass_error"></h4>
-                    <input type="submit" name="button" value="次へ" id="signup">
+                    <input type="submit" name="button" onclick="location.href='http://localhost/FoodManagement/confirmation.html'" value="次へ" id="signup">
                 </div>
             </form>
             <script>
+                const button = document.getElementById("signup");
+                button.disabled = true;
+
                 function CheckPassword(confirm){
                     var input1 = pass.value;
                     var input2 = confirm.value;
                     
                     if (input1 != input2){
                         document.getElementById("pass_error").innerHTML="<strong>パスワードが一致しません。</strong>";
+                        button.disabled = true;
                     }else{
                         document.getElementById("pass_error").innerHTML="";
+                        button.disabled = false;
                     }
                 }
+
                 document.getElementById("signup").onclick = function(){
                     const email = document.getElementById("email").value;
                     const passward = document.getElementById("pass").value;
