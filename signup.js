@@ -1,14 +1,17 @@
 var email;
-var passward;
+var password;
 var passcount;
 var re_password;
 var asterisk;
 
+
+
 //document.getElementById("signup").onclick = function(){
 function onclick(){
+    document.write("a");
     email = document.getElementById("email").value;
-    passward = document.getElementById("pass").value;
-    passcount = passward.length;
+    password = document.getElementById("pass").value;
+    passcount = password.length;
     re_password = document.getElementById("re_pass").value;
     asterisk = "";
 
