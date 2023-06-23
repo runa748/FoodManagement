@@ -40,9 +40,10 @@
                     <input type="password" maxlength="64" placeholder="Password(64字以内)" id="pass" required="required">
                     <input type="password" name="confirm" maxlength="64" placeholder="Password(再入力)" id="re_pass" required="required" oninput= "CheckPassword(this)">
                     <h4 id="pass_error"></h4>
-                    <input type="submit" name="button" value="次へ" id="signup" onclick="onclick()">
+                    <input id="signup" type="submit" name="button" value="次へ"  onclick="onclick();"/>
                 </div>
             </form>
+
             <script>
                 const button = document.getElementById("signup");
                 button.disabled = true;
